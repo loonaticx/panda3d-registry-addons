@@ -21,13 +21,15 @@ This was mostly created for personal use, so installation of these keys may requ
 
 ## Preinstallation
 
+**NOTICE 7/25/22:** Newer Panda3D versions do NOT use ``egg_auto_file`` or ``bam_auto_file``. Instead, they use ``Panda3D.Model``
+
 To ensure these context menus function as intended, let's ensure that we install our keys into the correct location. Note that you must have administrator privileges to modify and install keys to the registry. Additionally, please see my **disclaimer below** before deciding to continue.
 
 - Open Registry Editor (``regedit.exe``) and go to the ``HKEY_CLASSES_ROOT`` directory. 
 - Search and ensure that the ``.bam`` and ``.egg`` file extension keys exist.
 - For each key, click on it (the folder icon) and take note on what the Data is for the ``(Default)`` string value.
 - By default, these keys assume that the data is ``bam_auto_file`` and ``egg_auto_file`` respectively for each extension. 
-	- If this is not the case, you will need to edit the registry keys (provided in this repo) and replace ``bam_auto_file``/``egg_auto_file`` with whatever the data value is for each of them. 
+	- If this is not the case, you will need to edit the registry keys (provided in this repo) and replace ``bam_auto_file``/``egg_auto_file`` with whatever the data value is for each of them.
 
 ## Installation
 
