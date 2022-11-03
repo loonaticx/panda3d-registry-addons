@@ -1,26 +1,26 @@
-# Panda3D Registry Add-ons
+# Panda3D Windows Registry Add-ons
 
-This was mostly created for personal use, so installation of these keys may require a bit of custom configuration to suite your own preferences. **The preinstallation and installation guides below are subject to change at any time!**
+It can get a bit annoying opening a new command prompt each time you want to modify a Panda3D model (eg bam2egg), especially if you have tons of models to convert!
+
+Simple operations shouldn't be time-consuming jobs. The registry keys provided expands what you can do with egg files to help cut down the time it takes to perform these simple tasks.
 
 ## Features
 
-![Preview Eggfiles in Windows Explorer preview panel.](img/feature_1.png)
-
-**General:**
+**Egg file extensions:**
 - Support for previewing the contents of egg files in Windows Explorer's preview pane.
+- Convert to Bamfile in context menu.
+
+![Preview Eggfiles in Windows Explorer preview panel.](img/feature_1.png)
 
 ### Panda3D Context Menu Shortcuts
 
 ![Convert to Bamfile in Windows Explorer context menu.](img/feature_2.png)
 
-**Eggfiles:**
-- Convert to Bamfile
-
-
 ## Installation
 
-1) Copy all of the Python files located in the ``scripts`` folder into a new directory. Keep note of this directory's path.
+1) Copy all of the Python files located in the ``scripts`` folder into a new directory (if desired). Keep note of this directory's path.
 2) Launch ``SetEnvVariables.bat`` and enter your preferred Panda3D installation path & the new directory from step 1 when prompted.
+    - This will create two environment variables under the user: ``PANDA_PATH_1`` and ``PANDA_REGISTRY_PATH_1``.
 3) Open ``egg_extensions.reg`` and install the new keys. *You will need administrator privileges in order to apply these changes.*
 6) If all works as intended, you should now be able to view these shortcuts when you right click on a bam/egg file! *(Does not require restarting your computer.)*
 
