@@ -1,0 +1,18 @@
+﻿Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\egg2bam]
+@="Convert to Bamfile"
+"Icon"="\"C:\\Panda3D-1.11.0-x64\\bin\\egg2bam.exe\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\egg2bam\command]
+@="\"C:\\Panda3D-1.11.0-x64\\python\\python.exe\" \"C:\\registry\\egg2bam.py\" \"%1%*\""
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\open\command]
+@="\"C:\\Panda3D-1.11.0-x64\\bin\\pview.exe\" \"%1\""
+
