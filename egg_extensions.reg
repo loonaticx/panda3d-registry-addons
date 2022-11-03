@@ -1,0 +1,88 @@
+﻿Windows Registry Editor Version 5.00
+
+; This script combines the auto_file and Panda3D.Model value entries for convenience.
+; Older Panda3D versions used egg_auto_file, newer panda versions use Panda3D.Model
+; Note: The scripts assume you have a directory C:\registry with the correct python scripts in them.
+
+;--------------------------------------------------------------------------
+
+; This enables right clicking "Convert to Bamfile" in context menu
+; egg_auto_file version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\egg2bam]
+@="Convert to Bamfile"
+"Icon"=hex(2):22,00,25,00,50,00,41,00,4e,00,44,00,41,00,5f,00,50,00,41,00,54,\
+  00,48,00,5f,00,31,00,25,00,5c,00,62,00,69,00,6e,00,5c,00,65,00,67,00,67,00,\
+  32,00,62,00,61,00,6d,00,2e,00,65,00,78,00,65,00,22,00,00,00
+
+; Panda3D.Model version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Panda3D.Model\shell\egg2bam]
+@="Convert to Bamfile"
+"Icon"=hex(2):22,00,25,00,50,00,41,00,4e,00,44,00,41,00,5f,00,50,00,41,00,54,\
+  00,48,00,5f,00,31,00,25,00,5c,00,62,00,69,00,6e,00,5c,00,65,00,67,00,67,00,\
+  32,00,62,00,61,00,6d,00,2e,00,65,00,78,00,65,00,22,00,00,00
+ 
+;--------------------------------------------------------------------------
+
+; This defines the "Convert to Bamfile" context entry.
+; egg_auto_file version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\egg2bam\command]
+@=hex(2):22,00,25,00,50,00,41,00,4e,00,44,00,41,00,5f,00,50,00,41,00,54,00,48,\
+  00,5f,00,31,00,25,00,5c,00,70,00,79,00,74,00,68,00,6f,00,6e,00,5c,00,70,00,\
+  79,00,74,00,68,00,6f,00,6e,00,2e,00,65,00,78,00,65,00,22,00,20,00,22,00,25,\
+  00,50,00,41,00,4e,00,44,00,41,00,5f,00,52,00,45,00,47,00,49,00,53,00,54,00,\
+  52,00,59,00,5f,00,50,00,41,00,54,00,48,00,5f,00,31,00,25,00,5c,00,65,00,67,\
+  00,67,00,32,00,62,00,61,00,6d,00,2e,00,70,00,79,00,22,00,20,00,22,00,25,00,\
+  31,00,25,00,2a,00,22,00,00,00
+
+; Panda3D.Model version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Panda3D.Model\shell\egg2bam\command]
+@=hex(2):22,00,25,00,50,00,41,00,4e,00,44,00,41,00,5f,00,50,00,41,00,54,00,48,\
+  00,5f,00,31,00,25,00,5c,00,70,00,79,00,74,00,68,00,6f,00,6e,00,5c,00,70,00,\
+  79,00,74,00,68,00,6f,00,6e,00,2e,00,65,00,78,00,65,00,22,00,20,00,22,00,25,\
+  00,50,00,41,00,4e,00,44,00,41,00,5f,00,52,00,45,00,47,00,49,00,53,00,54,00,\
+  52,00,59,00,5f,00,50,00,41,00,54,00,48,00,5f,00,31,00,25,00,5c,00,65,00,67,\
+  00,67,00,32,00,62,00,61,00,6d,00,2e,00,70,00,79,00,22,00,20,00,22,00,25,00,\
+  31,00,25,00,2a,00,22,00,00,00
+
+;--------------------------------------------------------------------------
+
+; Tell registry to associate egg files with pview.
+; egg_auto_file version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\egg_auto_file\shell\open\command]
+@=hex(2):22,00,25,00,50,00,41,00,4e,00,44,00,41,00,5f,00,50,00,41,00,54,00,48,\
+  00,5f,00,31,00,25,00,5c,00,62,00,69,00,6e,00,5c,00,70,00,76,00,69,00,65,00,\
+  77,00,2e,00,65,00,78,00,65,00,22,00,20,00,2d,00,6c,00,20,00,22,00,25,00,31,\
+  00,22,00,00,00
+  
+; Panda3D.Model version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Panda3D.Model\shell\open]
+
+[HKEY_CURRENT_USER\SOFTWARE\Classes\Panda3D.Model\shell\open\command]
+@=hex(2):22,00,25,00,50,00,41,00,4e,00,44,00,41,00,5f,00,50,00,41,00,54,00,48,\
+  00,5f,00,31,00,25,00,5c,00,62,00,69,00,6e,00,5c,00,70,00,76,00,69,00,65,00,\
+  77,00,2e,00,65,00,78,00,65,00,22,00,20,00,2d,00,6c,00,20,00,22,00,25,00,31,\
+  00,22,00,00,00
+
+;--------------------------------------------------------------------------
+
+; This allows to preview egg files in the preview panel in Explorer.
+; egg_auto_file version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.egg]
+@="egg_auto_file"
+"Content Type"="text/plain"
+"PerceivedType"="text"
+
+; Panda3D.Model version
+[HKEY_CURRENT_USER\SOFTWARE\Classes\.egg]
+@="Panda3D.Model"
+"Content Type"="application/x-egg"
+"PerceivedType"="text"
+
+;--------------------------------------------------------------------------
+
